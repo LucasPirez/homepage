@@ -154,6 +154,10 @@ body {
 .intro__icon path {
   fill: var(--text-decoration-color);
 }
+.intro__icon__end {
+  transform: rotate(180deg);
+  margin-left: 1rem;
+}
 
 .intro_text {
   color: var(--secondary-text-color);
