@@ -14,6 +14,7 @@ body {
   --icon-color: #6a737d;
   --border-color: #ff9a0045;
   --text-decoration-color: #ff9a00;
+  --text-alternative-border: #3e3957;
 }
 
 .container {
@@ -27,9 +28,14 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+.custom-fh {
+  align-items: center;
+  justify-content: space-evenly;
+}
 
 .fv {
   display: flex;
+
   flex-direction: column;
   justify-content: space-between;
 }
@@ -124,12 +130,12 @@ body {
 }
 
 .contact-info__avatar {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  border-radius: 65% 35% 65% 35% / 28% 69% 31% 72%;
+  width: 190px;
+  height: 190px;
   object-fit: cover;
   border: 3px solid;
-  border-color: var(--text-decoration-color);
+  border-color: var(--text-alternative-border);
 }
 /* ==================== Contact info styles ==================== */
 
@@ -151,12 +157,13 @@ body {
   vertical-align: text-bottom;
 }
 
-.intro__icon path {
-  fill: var(--text-decoration-color);
-}
 .intro__icon__end {
   transform: rotate(180deg);
-  margin-left: 1rem;
+  margin-left: 10px;
+}
+
+.intro__icon path {
+  fill: var(--text-decoration-color);
 }
 
 .intro_text {
@@ -170,9 +177,16 @@ body {
   margin-bottom: 15px;
 }
 
+.skills__container {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .skills__text {
   color: var(--secondary-text-color);
-  text-align: justify;
 }
 /* ==================== intro and skyls styles ==================== */
 
