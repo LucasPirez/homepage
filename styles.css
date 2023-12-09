@@ -25,17 +25,14 @@ body {
 
 .fh {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.custom-fh {
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
+  gap: 40px;
+  width: 100%;
 }
 
 .fv {
   display: flex;
-
   flex-direction: column;
   justify-content: space-between;
 }
@@ -54,10 +51,14 @@ body {
   margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 750px) {
   .main-info,
   .contact_info_container {
     flex-direction: column;
+  }
+
+  .fh {
+    gap: 0;
   }
 
   .contact_info_container {
@@ -107,6 +108,7 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: start;
+  width: 200px;
 }
 
 .contact-info__item:not(:last-child) {
@@ -131,11 +133,25 @@ body {
 
 .contact-info__avatar {
   border-radius: 65% 35% 65% 35% / 28% 69% 31% 72%;
-  width: 190px;
-  height: 190px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   border: 3px solid;
   border-color: var(--text-alternative-border);
+  background: #aeaeae;
+}
+
+.section__contact {
+  padding: 1rem;
+}
+.contact__header {
+  color: var(--secondary-text-color);
+}
+
+.container__info {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
 }
 /* ==================== Contact info styles ==================== */
 
@@ -202,6 +218,10 @@ body {
   margin-bottom: 20px;
 }
 
+.sub__title {
+  margin-bottom: 5px;
+}
+
 .experiences__company-header-durability {
   color: var(--durability-text-color);
   text-align: left;
@@ -214,7 +234,6 @@ body {
   text-decoration-color: var(--text-decoration-color);
   text-decoration-line: underline;
   text-align: left;
-  margin-bottom: 20px;
 }
 
 .experiences__company-project {
@@ -251,7 +270,9 @@ body {
 .additional-info__education-header {
   color: var(--secondary-text-color);
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
 .additional-info__education-university-durability {
